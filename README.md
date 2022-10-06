@@ -1,6 +1,37 @@
 # Vim Cheat Sheet
 
-## ```:``` Commands
+#### Table of Contents
+  
+  * [Commands](#commands)
+  * [Editor Actions](#editor-actions)
+    + [Single Letter Actions](#single-letter-actions)
+    + [Multiple Letter Actions](#multiple-letter-actions)
+  * [Ctrl Actions](#ctrl-actions)
+    + [Moving Around](#moving-around)
+    + [Insert Mode](#insert-mode)
+    + [Window Actions](#window-actions)
+  * [Editing Mode](#editing-mode)
+    + [Inserting and appending text](#inserting-and-appending-text)
+    + [Editing](#editing)
+  * [Marking text via visual mode](#marking-text-via-visual-mode)
+  * [Visual commands](#visual-commands)
+  * [Registers](#registers)
+    + [Special registers](#special-registers)
+  * [Marks and positions](#marks-and-positions)
+  * [Macros](#macros)
+  * [Cut and paste](#cut-and-paste)
+  * [Indent text](#indent-text)
+  * [Exiting](#exiting)
+  * [Searching](#searching)
+    + [Search and replace](#search-and-replace)
+    + [Search in multiple files](#search-in-multiple-files)
+  * [Tabs](#tabs)
+  * [Working with multiple files](#working-with-multiple-files)
+  * [Diff Operations](#diff-operations)
+
+
+
+## Commands
 
 * ```:h[elp] <keyword>``` - open help for ```<keyword>``` (_don't use "<>"_)
 * ```:sav[eas] <file>``` - save ```<file>``` as
@@ -8,7 +39,6 @@
 * ```:ter[minal]``` - open a terminal window
 
 ---
-
 
 ## Editor Actions
 ### Single Letter Actions
@@ -55,8 +85,8 @@
 ---
 
 
-## ```Ctrl``` Actions
-### ```Ctrl``` - Moving Around
+## Ctrl Actions
+### Moving Around
 
 * ```Ctrl + e``` - move screen down one line (without moving cursor)
 * ```Ctrl + y``` - move screen up one line (without moving cursor)
@@ -66,7 +96,7 @@
 * ```Ctrl + u``` - move back 1/2 a screen
 
 * **Tip**: - _Prefix a cursor movement command with a number to repeat it. For example, 4j moves down 4 lines._
-### ```Ctrl``` - Insert Mode 
+### Insert Mode 
 
 * ```Ctrl + h``` - delete the character before the cursor during insert mode
 * ```Ctrl + w``` - delete word before the cursor during insert mode
@@ -77,7 +107,7 @@
 * ```Ctrl + p``` - insert (auto-complete) previous match before the cursor during insert mode
 * ```Ctrl + rx``` - insert the contents of register x
 
-### ```Ctrl``` - Window Actions
+### Window Actions
  
 * ```Ctrl + ws``` - split window 
 * ```Ctrl + wv``` - split window vertically
@@ -94,7 +124,7 @@
 
 
 ## Editing Mode
-### Insert mode - inserting/appending text
+### Inserting and appending text
 
 * ```i``` - insert before the cursor
 * ```I``` - insert at the beginning of the line
@@ -128,7 +158,7 @@
 ---
 
 
-## Marking text (visual mode)
+## Marking text via visual mode
 * ```v``` - start visual mode, mark lines, then do a command (like y-yank)
 * ```V``` - start linewise visual mode
 * ```o``` - move to other end of marked area
@@ -251,7 +281,7 @@
 * ```:wqa``` - write (save) and quit on all tabs
 ---
 
-## Searching …
+## Searching
 
 ### Search and replace
 * ```/pattern``` - search for pattern
