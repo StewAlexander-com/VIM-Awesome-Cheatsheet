@@ -90,49 +90,50 @@
 ## Editing Mode
 ### Insert mode - inserting/appending text
 
-i - insert before the cursor
-I - insert at the beginning of the line
-a - insert (append) after the cursor
-A - insert (append) at the end of the line
-o - append (open) a new line below the current line
-O - append (open) a new line above the current line
-ea - insert (append) at the end of the word
-Esc - exit insert mode
+* ```i``` - insert before the cursor
+* ```I``` - insert at the beginning of the line
+* ```a``` - insert (append) after the cursor
+* ```A``` - insert (append) at the end of the line
+* ```o``` - append (open) a new line below the current line
+* ```O``` - append (open) a new line above the current line
+* ```ea``` - insert (append) at the end of the word
+* ```Esc``` - exit insert mode
+
 ### Editing
-r - replace a single character
-J - join line below to the current one with one space in between
-gJ - join line below to the current one without space in between
-gwip - reflow paragraph
-g~ - switch case up to motion
-gu - change to lowercase up to motion
-gU - change to uppercase up to motion
-cc - change (replace) entire line
-C - change (replace) to the end of the line
-c$ - change (replace) to the end of the line
-ciw - change (replace) entire word
-cw - change (replace) to the end of the word
-s - delete character and substitute text
-S - delete line and substitute text (same as cc)
-xp - transpose two letters (delete and paste)
-u - undo
-U - restore (undo) last changed line
-Ctrl + r - redo
-. - repeat last command
+* ```r``` - replace a single character
+* ```J``` - join line below to the current one with one space in between
+* ```gJ``` - join line below to the current one without space in between
+* ```gwip``` - reflow paragraph
+* ```g~``` - switch case up to motion
+* ```gu``` - change to lowercase up to motion
+* ```gU``` - change to uppercase up to motion
+* ```cc``` - change (replace) entire line
+* ```C``` - change (replace) to the end of the line
+* ```c$``` - change (replace) to the end of the line
+* ```ciw``` - change (replace) entire word
+* ```cw``` - change (replace) to the end of the word
+* ```s``` - delete character and substitute text
+* ```S``` - delete line and substitute text (same as cc)
+* ```xp``` - transpose two letters (delete and paste)
+* ```u``` - undo
+* ```U``` - restore (undo) last changed line
+* ```Ctrl + r``` - redo
+* ```.``` - repeat last command
 ---
 ## Marking text (visual mode)
-v - start visual mode, mark lines, then do a command (like y-yank)
-V - start linewise visual mode
-o - move to other end of marked area
-Ctrl + v - start visual block mode
-O - move to other corner of block
-aw - mark a word
-ab - a block with ()
-aB - a block with {}
-at - a block with <> tags
-ib - inner block with ()
-iB - inner block with {}
-it - inner block with <> tags
-Esc - exit visual mode
+* ```v``` - start visual mode, mark lines, then do a command (like y-yank)
+* ```V``` - start linewise visual mode
+* ```o``` - move to other end of marked area
+* ```Ctrl + v``` - start visual block mode
+* ```O``` - move to other corner of block
+* ```aw``` - mark a word
+* ```ab``` - a block with ()
+* ```aB``` - a block with {}
+* ```at``` - a block with <> tags
+* ```ib``` - inner block with ()
+* ```iB``` - inner block with {}
+* ```it``` - inner block with <> tags
+* ```Esc``` - exit visual mode
 * **Tip**: - _Instead of b or B one can also use ( or { respectively._
 ---
 ## Visual commands
