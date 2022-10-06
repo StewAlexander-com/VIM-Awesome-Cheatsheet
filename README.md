@@ -8,6 +8,7 @@
 * ```:ter[minal]``` - open a terminal window
 
 ---
+
 ## Editor Actions
 ### Single Letter Actions
 
@@ -248,45 +249,45 @@
 * ```:ccl[ose]``` - close the quickfix window
 ---
 ## Tabs
-* ```:tabnew or :tabnew {page.words.file} - open a file in a new tab
-* ```Ctrl + wT - move the current split window into its own tab
-* ```gt or :tabn[ext] - move to the next tab
-* ```gT or :tabp[revious] - move to the previous tab
-* ```#gt - move to tab number #
-* ```:tabm[ove] # - move current tab to the #th position (indexed from 0)
-* ```:tabc[lose] - close the current tab and all its windows
-* ```:tabo[nly] - close all tabs except for the current one
-* ```:tabdo command - run the command on all tabs (e.g. :tabdo q - closes all opened tabs)
+* ```:tabnew``` or ```:tabnew {page.words.file}``` - open a file in a new tab
+* ```Ctrl + wT``` - move the current split window into its own tab
+* ```gt``` or ```:tabn[ext]``` - move to the next tab
+* ```gT``` or ```:tabp[revious]``` - move to the previous tab
+* ```#gt``` - move to tab number #
+* ```:tabm[ove] #``` - move current tab to the ```#```th position (indexed from 0)
+* ```:tabc[lose]``` - close the current tab and all its windows
+* ```:tabo[nly]``` - close all tabs except for the current one
+* ```:tabdo command``` - run the command on all tabs (e.g. ```:tabdo q``` - closes all opened tabs)
 ---
 ## Working with multiple files
-* ```:e[dit] file - edit a file in a new buffer
-* ```:bn[ext] - go to the next buffer
-* ```:bp[revious] - go to the previous buffer
-* ```:bd[elete] - delete a buffer (close a file)
-* ```:b[uffer]# - go to a buffer by index #
-* ```:b[uffer] file - go to a buffer by file
-* ```:ls or :buffers - list all open buffers
-* ```:sp[lit] file - open a file in a new buffer and split window
-* ```:vs[plit] file - open a file in a new buffer and vertically split window
-* ```:vert[ical] ba[ll] - edit all buffers as vertical windows
-* ```:tab ba[ll] - edit all buffers as tabs
+* ```:e[dit]``` file - edit a file in a new buffer
+* ```:bn[ext]``` - go to the next buffer
+* ```:bp[revious]``` - go to the previous buffer
+* ```:bd[elete]``` - delete a buffer (close a file)
+* ```:b[uffer]#``` - go to a buffer by index #
+* ```:b[uffer] <file>``` - go to a buffer by ```<file>``` (_remove the "<>")
+* ```:ls``` or ```:buffers``` - list all open buffers
+* ```:sp[lit] <file>``` - open a ```<file>``` in a new buffer and split window
+* ```:vs[plit] <file>``` - open a ```<file> ```in a new buffer and vertically split window
+* ```:vert[ical] ba[ll]``` - edit all buffers as vertical windows
+* ```:tab ba[ll]``` - edit all buffers as tabs
 ----
 ## Diff Operations
-* ```zf - manually define a fold up to motion
-* ```zd - delete fold under the cursor
-* ```za - toggle fold under the cursor
-* ```zo - open fold under the cursor
-* ```zc - close fold under the cursor
-* ```zr - reduce (open) all folds by one level
-* ```zm - fold more (close) all folds by one level
-* ```zi - toggle folding functionality
-* ```]c - jump to start of next change
-* ```[c - jump to start of previous change
-* ```do or :diffg[et] - obtain (get) difference (from other buffer)
-* ```dp or :diffpu[t] - put difference (to other buffer)
-* ```:diffthis - make current window part of diff
-* ```:dif[fupdate] - update differences
-* ```:diffo[ff] - switch off diff mode for current window
+* ```zf``` - manually define a fold up to motion
+* ```zd``` - delete fold under the cursor
+* ```za``` - toggle fold under the cursor
+* ```zo``` - open fold under the cursor
+* ```zc``` - close fold under the cursor
+* ```zr``` - reduce (open) all folds by one level
+* ```zm``` - fold more (close) all folds by one level
+* ```zi``` - toggle folding functionality
+* ```]c```- jump to start of next change
+* ```[c``` - jump to start of previous change
+* ```do``` or ```:diffg[et]``` - obtain (get) difference (from other buffer)
+* ```dp``` or ```:diffpu[t]``` - put difference (to other buffer)
+* ```:diffthis``` - make current window part of diff
+* ```:dif[fupdate]``` - update differences
+* ```:diffo[ff]``` - switch off diff mode for current window
 * **Tip** - _The commands for folding (e.g. za) operate on one level. To operate on all levels, use uppercase letters (e.g. zA)._
 * **Tip** - _To view the differences of files, one can directly start Vim in diff mode by running vimdiff in a terminal. One can even set this as git difftool._
 
