@@ -135,54 +135,57 @@
 * ```it``` - inner block with <> tags
 * ```Esc``` - exit visual mode
 * **Tip**: - _Instead of b or B one can also use ( or { respectively._
----
+* ---
 ## Visual commands
-> - shift text right
-< - shift text left
-y - yank (copy) marked text
-d - delete marked text
-~ - switch case
-u - change marked text to lowercase
-U - change marked text to uppercase
----
+* ```>``` - shift text right
+* ```<``` - shift text left
+* ```y``` - yank (copy) marked text
+* ```d``` - delete marked text
+* ```~``` - switch case
+* ```u``` - change marked text to lowercase
+* ```U``` - change marked text to uppercase
+---   
 ## Registers
-:reg[isters] - show registers content
-"xy - yank into register x
-"xp - paste contents of register x
-"+y - yank into the system clipboard register
-"+p - paste from the system clipboard register
-Tip Registers are being stored in ~/.viminfo, and will be loaded again on next restart of vim.
-Tip Special registers:
- 0 - last yank
- " - unnamed register, last delete or yank
- % - current file name
- # - alternate file name
- * - clipboard contents (X11 primary)
- + - clipboard contents (X11 clipboard)
- / - last search pattern
- : - last command-line
- . - last inserted text
- - - last small (less than a line) delete
- = - expression register
- _ - black hole register
+* ```:reg[isters]``` - show registers content
+* ```"xy` ```- yank into register x
+* ```"xp` ``` - paste contents of register x
+* ```"+y` ```- yank into the system clipboard register
+* ```"+p` ```- paste from the system clipboard register
+
+* **Tip** - _Registers are being stored in ~/.viminfo, and will be loaded again on next restart of vim._
+* **Tip* - _Special registers:_
+
+* ``` 0``` - last yank
+* ``` "``` - unnamed register, last delete or yank
+* ``` %``` - current file name
+* ``` #``` - alternate file name
+* ``` *``` - clipboard contents (X11 primary)
+* ``` +``` - clipboard contents (X11 clipboard)
+* ``` /``` - last search pattern
+* ``` :``` - last command-line
+* ``` .``` - last inserted text
+* ``` -``` - last small (less than a line) delete
+* ``` =``` - expression register
+* ``` _``` - black hole register
 ---
 ## Marks and positions
-:marks - list of marks
-ma - set current position for mark A
-`a - jump to position of mark A
-y`a - yank text to position of mark A
-`0 - go to the position where Vim was previously exited
-`" - go to the position when last editing this file
-`. - go to the position of the last change in this file
-`` - go to the position before the last jump
-:ju[mps] - list of jumps
-Ctrl + i - go to newer position in jump list
-Ctrl + o - go to older position in jump list
-:changes - list of changes
-g, - go to newer position in change list
-g; - go to older position in change list
-Ctrl + ] - jump to the tag under cursor
-Tip To jump to a mark you can either use a backtick (`) or an apostrophe ('). Using an apostrophe jumps to the beginning (first non-black) of the line holding the mark.
+* ```:marks* ``` - list of marks
+* ``` ma``` - set current position for mark ```A```
+* ``` `a ``` - jump to position of mark ```A```
+* ```y`a``` - yank text to position of mark``` A```
+* ``` `0``` - go to the position where Vim was previously exited
+* ``` `"``` - go to the position when last editing this file
+* ``` `.``` - go to the position of the last change in this file
+* ``` `` - ```go to the position before the last jump
+* ```:ju[mps]``` - list of jumps
+* ```Ctrl + i``` - go to newer position in jump list
+* ```Ctrl + o``` - go to older position in jump list
+* ```:changes``` - list of changes
+* ```g,``` - go to newer position in change list
+* ```g;``` - go to older position in change list
+* ```Ctrl + ]``` - jump to the tag under cursor
+
+* **Tip** - _To jump to a mark you can either use a backtick (``` ` ```) or an apostrophe ('). Using an apostrophe jumps to the beginning (first non-black) of the line holding the mark._
 ---
 ## Macros
 qa - record macro a
@@ -284,4 +287,5 @@ dp or :diffpu[t] - put difference (to other buffer)
 :diffo[ff] - switch off diff mode for current window
 * **Tip** - _The commands for folding (e.g. za) operate on one level. To operate on all levels, use uppercase letters (e.g. zA)._
 * **Tip** - _To view the differences of files, one can directly start Vim in diff mode by running vimdiff in a terminal. One can even set this as git difftool._
+
 
