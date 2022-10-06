@@ -169,6 +169,7 @@
 * ``` _``` - black hole register
 ---
 ## Marks and positions
+
 * ```:marks* ``` - list of marks
 * ``` ma``` - set current position for mark ```A```
 * ``` `a ``` - jump to position of mark ```A```
@@ -208,84 +209,84 @@
 * ```x```- delete (cut) character
 ---
 ## Indent text
->> - indent (move right) line one shiftwidth
-<< - de-indent (move left) line one shiftwidth
->% - indent a block with () or {} (cursor on brace)
->ib - indent inner block with ()
->at - indent a block with <> tags
-3== - re-indent 3 lines
-=% - re-indent a block with () or {} (cursor on brace)
-=iB - re-indent inner block with {}
-gg=G - re-indent entire buffer
-]p - paste and adjust indent to current line
+* ```>>``` - indent (move right) line one shiftwidth
+* ```<<``` - de-indent (move left) line one shiftwidth
+* ```>%``` - indent a block with () or {} (cursor on brace)
+* ```>ib``` - indent inner block with ()
+* ```>at``` - indent a block with <> tags
+* ```3==``` - re-indent 3 lines
+* ```=%``` - re-indent a block with () or {} (cursor on brace)
+* ```=iB``` - re-indent inner block with {}
+* ```gg=G``` - re-indent entire buffer
+* ```]p``` - paste and adjust indent to current line
 ---
 ## Exiting
-:w - write (save) the file, but don't exit
-:w !sudo tee % - write out the current file using sudo
-:wq or :x or ZZ - write (save) and quit
-:q - quit (fails if there are unsaved changes)
-:q! or ZQ - quit and throw away unsaved changes
-:wqa - write (save) and quit on all tabs
+* ```:w``` - write (save) the file, but don't exit
+* ```:w``` !sudo tee % - write out the current file using sudo
+* ```:w```q or :x or ZZ - write (save) and quit
+* ```:q``` - quit (fails if there are unsaved changes)
+* ```:q!``` or ZQ - quit and throw away unsaved changes
+* ```:wqa``` - write (save) and quit on all tabs
 ---
 ## Searching …
 
 ### Search and replace
-/pattern - search for pattern
-?pattern - search backward for pattern
-\vpattern - 'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)
-n - repeat search in same direction
-N - repeat search in opposite direction
-:%s/old/new/g - replace all old with new throughout file
-:%s/old/new/gc - replace all old with new throughout file with confirmations
-:noh[lsearch] - remove highlighting of search matches
+* ```/pattern``` - search for pattern
+* ```?pattern``` - search backward for pattern
+* ```\vpattern``` - 'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)
+* ```n``` - repeat search in same direction
+* ```N``` - repeat search in opposite direction
+* ```:%s/old/new/g``` - replace all old with new throughout file
+* ```:%s/old/new/gc``` - replace all old with new throughout file with confirmations
+* ```:noh[lsearch]``` - remove highlighting of search matches
 ### Search in multiple files
-:vim[grep] /pattern/ {`{file}`} - search for pattern in multiple files
-e.g. :vim[grep] /foo/ **/*
-:cn[ext] - jump to the next match
-:cp[revious] - jump to the previous match
-:cope[n] - open a window containing the list of matches
-:ccl[ose] - close the quickfix window
+* ```:vim[grep] /pattern/ {`{file}`}****``` - search for pattern in multiple files
+** ```e.g. :vim[grep] /foo/ **/*```
+* ```:cn[ext]``` - jump to the next match
+* ```:cp[revious]``` - jump to the previous match
+* ```:cope[n]``` - open a window containing the list of matches
+* ```:ccl[ose]``` - close the quickfix window
 ---
 ## Tabs
-:tabnew or :tabnew {page.words.file} - open a file in a new tab
-Ctrl + wT - move the current split window into its own tab
-gt or :tabn[ext] - move to the next tab
-gT or :tabp[revious] - move to the previous tab
-#gt - move to tab number #
-:tabm[ove] # - move current tab to the #th position (indexed from 0)
-:tabc[lose] - close the current tab and all its windows
-:tabo[nly] - close all tabs except for the current one
-:tabdo command - run the command on all tabs (e.g. :tabdo q - closes all opened tabs)
+* ```:tabnew or :tabnew {page.words.file} - open a file in a new tab
+* ```Ctrl + wT - move the current split window into its own tab
+* ```gt or :tabn[ext] - move to the next tab
+* ```gT or :tabp[revious] - move to the previous tab
+* ```#gt - move to tab number #
+* ```:tabm[ove] # - move current tab to the #th position (indexed from 0)
+* ```:tabc[lose] - close the current tab and all its windows
+* ```:tabo[nly] - close all tabs except for the current one
+* ```:tabdo command - run the command on all tabs (e.g. :tabdo q - closes all opened tabs)
 ---
 ## Working with multiple files
-:e[dit] file - edit a file in a new buffer
-:bn[ext] - go to the next buffer
-:bp[revious] - go to the previous buffer
-:bd[elete] - delete a buffer (close a file)
-:b[uffer]# - go to a buffer by index #
-:b[uffer] file - go to a buffer by file
-:ls or :buffers - list all open buffers
-:sp[lit] file - open a file in a new buffer and split window
-:vs[plit] file - open a file in a new buffer and vertically split window
-:vert[ical] ba[ll] - edit all buffers as vertical windows
-:tab ba[ll] - edit all buffers as tabs
+* ```:e[dit] file - edit a file in a new buffer
+* ```:bn[ext] - go to the next buffer
+* ```:bp[revious] - go to the previous buffer
+* ```:bd[elete] - delete a buffer (close a file)
+* ```:b[uffer]# - go to a buffer by index #
+* ```:b[uffer] file - go to a buffer by file
+* ```:ls or :buffers - list all open buffers
+* ```:sp[lit] file - open a file in a new buffer and split window
+* ```:vs[plit] file - open a file in a new buffer and vertically split window
+* ```:vert[ical] ba[ll] - edit all buffers as vertical windows
+* ```:tab ba[ll] - edit all buffers as tabs
 ----
 ## Diff Operations
-zf - manually define a fold up to motion
-zd - delete fold under the cursor
-za - toggle fold under the cursor
-zo - open fold under the cursor
-zc - close fold under the cursor
-zr - reduce (open) all folds by one level
-zm - fold more (close) all folds by one level
-zi - toggle folding functionality
-]c - jump to start of next change
-[c - jump to start of previous change
-do or :diffg[et] - obtain (get) difference (from other buffer)
-dp or :diffpu[t] - put difference (to other buffer)
-:diffthis - make current window part of diff
-:dif[fupdate] - update differences
-:diffo[ff] - switch off diff mode for current window
+* ```zf - manually define a fold up to motion
+* ```zd - delete fold under the cursor
+* ```za - toggle fold under the cursor
+* ```zo - open fold under the cursor
+* ```zc - close fold under the cursor
+* ```zr - reduce (open) all folds by one level
+* ```zm - fold more (close) all folds by one level
+* ```zi - toggle folding functionality
+* ```]c - jump to start of next change
+* ```[c - jump to start of previous change
+* ```do or :diffg[et] - obtain (get) difference (from other buffer)
+* ```dp or :diffpu[t] - put difference (to other buffer)
+* ```:diffthis - make current window part of diff
+* ```:dif[fupdate] - update differences
+* ```:diffo[ff] - switch off diff mode for current window
 * **Tip** - _The commands for folding (e.g. za) operate on one level. To operate on all levels, use uppercase letters (e.g. zA)._
 * **Tip** - _To view the differences of files, one can directly start Vim in diff mode by running vimdiff in a terminal. One can even set this as git difftool._
 
