@@ -21,7 +21,7 @@
   * [Macros](#macros)
   * [Cut and paste](#cut-and-paste)
   * [Indent text](#indent-text)
-  * [Exiting](#exiting)
+  * [Exiting and Saving files](#exiting-and-saving-files)
   * [Searching](#searching)
     + [Search and replace](#search-and-replace)
     + [Search in multiple files](#search-in-multiple-files)
@@ -272,7 +272,7 @@
 ---
 
 
-## Exiting
+## Exiting and Saving Files
 * ```:w``` - write (save) the file, but don't exit
 * ```:w``` !sudo tee % - write out the current file using sudo
 * ```:w```q or :x or ZZ - write (save) and quit
