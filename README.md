@@ -129,7 +129,7 @@ it - inner block with <> tags
 Esc - exit visual mode
 ```
 * **Tip**: - _Instead of b or B one can also use ( or { respectively._
---
+---
 ### Visual commands
 ```
 > - shift text right
