@@ -153,8 +153,8 @@
 * ```"+p` ```- paste from the system clipboard register
 
 * **Tip** - _Registers are being stored in ~/.viminfo, and will be loaded again on next restart of vim._
-* **Tip* - _Special registers:_
 
+### Special registers
 * ``` 0``` - last yank
 * ``` "``` - unnamed register, last delete or yank
 * ``` %``` - current file name
