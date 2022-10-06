@@ -12,8 +12,11 @@
 ### Single Letter Actions
 ```
 K - open man page for word under the cursor
-Tip Run vimtutor in a terminal to learn the first Vim commands.
-The Cursor movement
+```
+* **Tip**: - _Run vimtutor in a terminal to learn the first Vim commands._
+
+#### The Cursor movement
+```
 h - move cursor left
 j - move cursor down
 k - move cursor up
