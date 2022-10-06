@@ -2,7 +2,7 @@
 
 #### Table of Contents
   
-  * [Commands](#commands)
+  * [Misc Commands](#misc-commands)
   * [Editor Actions](#editor-actions)
     + [Single Letter Actions](#single-letter-actions)
     + [Multiple Letter Actions](#multiple-letter-actions)
@@ -31,7 +31,7 @@
 
 
 
-## Commands
+## Misc Commands
 
 * ```:h[elp] <keyword>``` - open help for ```<keyword>``` (_don't use "<>"_)
 * ```:sav[eas] <file>``` - save ```<file>``` as
