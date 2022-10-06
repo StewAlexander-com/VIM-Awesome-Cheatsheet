@@ -8,13 +8,12 @@
 :ter[minal] - open a terminal window
 ```
 ---
-## Single Letter Actions
+## Editor Actions
+### Single Letter Actions
 ```
 K - open man page for word under the cursor
 ```
 * **Tip**: - _Run vimtutor in a terminal to learn the first Vim commands._
-
-### The Cursor movement
 ```
 h - move cursor left
 j - move cursor down
@@ -34,8 +33,7 @@ B - jump backwards to the start of a word (words can contain punctuation)
 ^ - jump to the first non-blank character of the line
 $ - jump to the end of the line
 ```
----
-## Multiple Letter Actions
+### Multiple Letter Actions
 ```
 g_ - jump to the last non-blank character of the line
 gg - go to the first line of the document
