@@ -89,7 +89,8 @@ Ctrl + wk - move cursor to the window above (horizontal split)
 ```
 
 ---
-## Insert mode - inserting/appending text
+## Editing Mode
+### Insert mode - inserting/appending text
 
 ```
 i - insert before the cursor
@@ -101,8 +102,7 @@ O - append (open) a new line above the current line
 ea - insert (append) at the end of the word
 Esc - exit insert mode
 ```
----
-## Editing
+### Editing
 ```
 r - replace a single character
 J - join line below to the current one with one space in between
@@ -124,7 +124,6 @@ U - restore (undo) last changed line
 Ctrl + r - redo
 . - repeat last command
 ```
----
 ## Marking text (visual mode)
 ```
 v - start visual mode, mark lines, then do a command (like y-yank)
