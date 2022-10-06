@@ -229,7 +229,7 @@ gg=G - re-indent entire buffer
 ]p - paste and adjust indent to current line
 ```
 ---
-* Exiting
+### Exiting
 ```
 :w - write (save) the file, but don't exit
 :w !sudo tee % - write out the current file using sudo
