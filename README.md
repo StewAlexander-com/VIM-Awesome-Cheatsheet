@@ -12,7 +12,7 @@
     + [Window Actions](#window-actions)
   * [Editing Mode](#editing-mode)
     + [Inserting and appending text](#inserting-and-appending-text)
-    + [Editing](#editing)
+    + [General Editing](#general-editing)
   * [Marking text via visual mode](#marking-text-via-visual-mode)
   * [Visual commands](#visual-commands)
   * [Registers](#registers)
@@ -135,7 +135,7 @@
 * ```ea``` - insert (append) at the end of the word
 * ```Esc``` - exit insert mode
 
-### Editing
+### General Editing
 * ```r``` - replace a single character
 * ```J``` - join line below to the current one with one space in between
 * ```gJ``` - join line below to the current one without space in between
