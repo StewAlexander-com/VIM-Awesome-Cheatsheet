@@ -1,98 +1,95 @@
 # Vim Cheat Sheet
 
 ## ```:``` Commands
-```
-:h[elp] keyword - open help for keyword
-:sav[eas] file - save file as
-:clo[se] - close current pane
-:ter[minal] - open a terminal window
-```
+
+* ```:h[elp] <keyword>``` - open help for ```<keyword>``` (_don't use "<>"_)
+* ```:sav[eas] <file>``` - save ```<file>``` as
+* ```:clo[se]``` - close current pane
+* ```:ter[minal]``` - open a terminal window
+
 ---
 ## Editor Actions
 ### Single Letter Actions
-```
-K - open man page for word under the cursor
-```
+
+* ```K``` - open man page for word under the cursor
 * **Tip**: - _Run vimtutor in a terminal to learn the first Vim commands._
-```
-h - move cursor left
-j - move cursor down
-k - move cursor up
-l - move cursor right
-H - move to top of screen
-M - move to middle of screen
-L - move to bottom of screen
-w - jump forwards to the start of a word
-W - jump forwards to the start of a word (words can contain punctuation)
-e - jump forwards to the end of a word
-E - jump forwards to the end of a word (words can contain punctuation)
-b - jump backwards to the start of a word
-B - jump backwards to the start of a word (words can contain punctuation)
-% - move to matching character (default supported pairs: '()', '{}', '[]' - use :h matchpairs in vim for more info)
-0 - jump to the start of the line
-^ - jump to the first non-blank character of the line
-$ - jump to the end of the line
-```
+
+* ```h``` - move cursor left
+* ```j``` - move cursor down
+* ```k``` - move cursor up
+* ```l``` - move cursor right
+* ```H``` - move to top of screen
+* ```M``` - move to middle of screen
+* ```L``` - move to bottom of screen
+* ```w``` - jump forwards to the start of a word
+* ```W``` - jump forwards to the start of a word (words can contain punctuation)
+* ```e``` - jump forwards to the end of a word
+* ```E``` - jump forwards to the end of a word (words can contain punctuation)
+* ```b``` - jump backwards to the start of a word
+* ```B``` - jump backwards to the start of a word (words can contain punctuation)
+* ```%``` - move to matching character (default supported pairs: '()', '{}', '[]' - use :h matchpairs in vim for more info)
+* ```0``` - jump to the start of the line
+* ```^``` - jump to the first non-blank character of the line
+* ```$``` - jump to the end of the line
+* ```;``` - repeat previous f, t, F or T movement
+* ```,``` - repeat previous f, t, F or T movement, backwards
+* ```}``` - jump to next paragraph (or function/block, when editing code)
+* ```{``` - jump to previous paragraph (or function/block, when editing code)
+
 ### Multiple Letter Actions
-```
-g_ - jump to the last non-blank character of the line
-gg - go to the first line of the document
-G - go to the last line of the document
-5gg or 5G - go to line 5
-gd - move to local declaration
-gD - move to global declaration
-fx - jump to next occurrence of character x
-tx - jump to before next occurrence of character x
-Fx - jump to previous occurence of character x
-Tx - jump to after previous occurence of character x
-; - repeat previous f, t, F or T movement
-, - repeat previous f, t, F or T movement, backwards
-} - jump to next paragraph (or function/block, when editing code)
-{ - jump to previous paragraph (or function/block, when editing code)
-zz - center cursor on screen
-```
+
+* ```g_ ```- jump to the last non-blank character of the line
+* ```gg ```- go to the first line of the document
+* ```G -``` go to the last line of the document
+* ```5gg``` or ```5G```- go to line 5
+* ```gd``` - move to local declaration
+* ```gD``` - move to global declaration
+* ```fx``` - jump to next occurrence of character x
+* ```tx``` - jump to before next occurrence of character x
+* ```Fx``` - jump to previous occurence of character x
+* ```Tx``` - jump to after previous occurence of character x
+* ```zz``` - center cursor on screen
+
 ---
 ## ```Ctrl``` Actions
 ### ```Ctrl``` - Moving Around
-```
-Ctrl + e - move screen down one line (without moving cursor)
-Ctrl + y - move screen up one line (without moving cursor)
-Ctrl + b - move back one full screen
-Ctrl + f - move forward one full screen
-Ctrl + d - move forward 1/2 a screen
-Ctrl + u - move back 1/2 a screen
-```
+
+* ```Ctrl + e``` - move screen down one line (without moving cursor)
+* ```Ctrl + y``` - move screen up one line (without moving cursor)
+* ```Ctrl + b``` - move back one full screen
+* ```Ctrl + f``` - move forward one full screen
+* ```Ctrl + d``` - move forward 1/2 a screen
+* ```Ctrl + u``` - move back 1/2 a screen
+
 * **Tip**: - _Prefix a cursor movement command with a number to repeat it. For example, 4j moves down 4 lines._
 ### ```Ctrl``` - Insert Mode 
-```
-Ctrl + h - delete the character before the cursor during insert mode
-Ctrl + w - delete word before the cursor during insert mode
-Ctrl + j - begin new line during insert mode
-Ctrl + t - indent (move right) line one shiftwidth during insert mode
-Ctrl + d - de-indent (move left) line one shiftwidth during insert mode
-Ctrl + n - insert (auto-complete) next match before the cursor during insert mode
-Ctrl + p - insert (auto-complete) previous match before the cursor during insert mode
-Ctrl + rx - insert the contents of register x
-```
+
+* ```Ctrl + h``` - delete the character before the cursor during insert mode
+* ```Ctrl + w``` - delete word before the cursor during insert mode
+* ```Ctrl + j``` - begin new line during insert mode
+* ```Ctrl + t``` - indent (move right) line one shiftwidth during insert mode
+* ```Ctrl + d``` - de-indent (move left) line one shiftwidth during insert mode
+* ```Ctrl + n``` - insert (auto-complete) next match before the cursor during insert mode
+* ```Ctrl + p``` - insert (auto-complete) previous match before the cursor during insert mode
+* ```Ctrl + rx``` - insert the contents of register x
+
 ### ```Ctrl``` - Window Actions
-``` 
-Ctrl + ws - split window 
-Ctrl + wv - split window vertically
-Ctrl + ww - switch windows
-Ctrl + wq - quit a window
-Ctrl + wx - exchange current window with next one
-Ctrl + w= - make all windows equal height & width
-Ctrl + wh - move cursor to the left window (vertical split)
-Ctrl + wl - move cursor to the right window (vertical split)
-Ctrl + wj - move cursor to the window below (horizontal split)
-Ctrl + wk - move cursor to the window above (horizontal split)
-```
+ 
+* ```Ctrl + ws``` - split window 
+* ```Ctrl + wv``` - split window vertically
+* ```Ctrl + ww``` - switch windows
+* ```Ctrl + wq``` - quit a window
+* ```Ctrl + wx``` - exchange current window with next one
+* ```Ctrl + w=``` - make all windows equal height & width
+* ```Ctrl + wh``` - move cursor to the left window (vertical split)
+* ```Ctrl + wl``` - move cursor to the right window (vertical split)
+* ```Ctrl + wj``` - move cursor to the window below (horizontal split)
+* ```Ctrl + wk``` - move cursor to the window above (horizontal split)
 
 ---
 ## Editing Mode
 ### Insert mode - inserting/appending text
 
-```
 i - insert before the cursor
 I - insert at the beginning of the line
 a - insert (append) after the cursor
@@ -101,9 +98,7 @@ o - append (open) a new line below the current line
 O - append (open) a new line above the current line
 ea - insert (append) at the end of the word
 Esc - exit insert mode
-```
 ### Editing
-```
 r - replace a single character
 J - join line below to the current one with one space in between
 gJ - join line below to the current one without space in between
@@ -123,10 +118,8 @@ u - undo
 U - restore (undo) last changed line
 Ctrl + r - redo
 . - repeat last command
-```
 ---
 ## Marking text (visual mode)
-```
 v - start visual mode, mark lines, then do a command (like y-yank)
 V - start linewise visual mode
 o - move to other end of marked area
@@ -140,11 +133,9 @@ ib - inner block with ()
 iB - inner block with {}
 it - inner block with <> tags
 Esc - exit visual mode
-```
 * **Tip**: - _Instead of b or B one can also use ( or { respectively._
 ---
 ## Visual commands
-```
 > - shift text right
 < - shift text left
 y - yank (copy) marked text
@@ -152,10 +143,8 @@ d - delete marked text
 ~ - switch case
 u - change marked text to lowercase
 U - change marked text to uppercase
-```
 ---
 ## Registers
-```
 :reg[isters] - show registers content
 "xy - yank into register x
 "xp - paste contents of register x
@@ -175,10 +164,8 @@ Tip Special registers:
  - - last small (less than a line) delete
  = - expression register
  _ - black hole register
-```
 ---
 ## Marks and positions
-```
 :marks - list of marks
 ma - set current position for mark A
 `a - jump to position of mark A
@@ -195,10 +182,8 @@ g, - go to newer position in change list
 g; - go to older position in change list
 Ctrl + ] - jump to the tag under cursor
 Tip To jump to a mark you can either use a backtick (`) or an apostrophe ('). Using an apostrophe jumps to the beginning (first non-black) of the line holding the mark.
-```
 ---
 ## Macros
-```
 qa - record macro a
 q - stop recording macro
 @a - run macro a
@@ -216,10 +201,8 @@ dw - delete (cut) the characters of the word from the cursor position to the sta
 D - delete (cut) to the end of the line
 d$ - delete (cut) to the end of the line
 x - delete (cut) character
-```
 ---
 ## Indent text
-```
 >> - indent (move right) line one shiftwidth
 << - de-indent (move left) line one shiftwidth
 >% - indent a block with () or {} (cursor on brace)
@@ -230,22 +213,18 @@ x - delete (cut) character
 =iB - re-indent inner block with {}
 gg=G - re-indent entire buffer
 ]p - paste and adjust indent to current line
-```
 ---
 ## Exiting
-```
 :w - write (save) the file, but don't exit
 :w !sudo tee % - write out the current file using sudo
 :wq or :x or ZZ - write (save) and quit
 :q - quit (fails if there are unsaved changes)
 :q! or ZQ - quit and throw away unsaved changes
 :wqa - write (save) and quit on all tabs
-```
 ---
 ## Searching …
 
 ### Search and replace
-```
 /pattern - search for pattern
 ?pattern - search backward for pattern
 \vpattern - 'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)
@@ -254,19 +233,15 @@ N - repeat search in opposite direction
 :%s/old/new/g - replace all old with new throughout file
 :%s/old/new/gc - replace all old with new throughout file with confirmations
 :noh[lsearch] - remove highlighting of search matches
-```
 ### Search in multiple files
-```
 :vim[grep] /pattern/ {`{file}`} - search for pattern in multiple files
 e.g. :vim[grep] /foo/ **/*
 :cn[ext] - jump to the next match
 :cp[revious] - jump to the previous match
 :cope[n] - open a window containing the list of matches
 :ccl[ose] - close the quickfix window
-```
 ---
 ## Tabs
-```
 :tabnew or :tabnew {page.words.file} - open a file in a new tab
 Ctrl + wT - move the current split window into its own tab
 gt or :tabn[ext] - move to the next tab
@@ -276,10 +251,8 @@ gT or :tabp[revious] - move to the previous tab
 :tabc[lose] - close the current tab and all its windows
 :tabo[nly] - close all tabs except for the current one
 :tabdo command - run the command on all tabs (e.g. :tabdo q - closes all opened tabs)
-```
 ---
 ## Working with multiple files
-```
 :e[dit] file - edit a file in a new buffer
 :bn[ext] - go to the next buffer
 :bp[revious] - go to the previous buffer
@@ -291,10 +264,8 @@ gT or :tabp[revious] - move to the previous tab
 :vs[plit] file - open a file in a new buffer and vertically split window
 :vert[ical] ba[ll] - edit all buffers as vertical windows
 :tab ba[ll] - edit all buffers as tabs
-```
 ----
 ## Diff Operations
-```
 zf - manually define a fold up to motion
 zd - delete fold under the cursor
 za - toggle fold under the cursor
@@ -310,7 +281,6 @@ dp or :diffpu[t] - put difference (to other buffer)
 :diffthis - make current window part of diff
 :dif[fupdate] - update differences
 :diffo[ff] - switch off diff mode for current window
-```
 * **Tip** - _The commands for folding (e.g. za) operate on one level. To operate on all levels, use uppercase letters (e.g. zA)._
 * **Tip** - _To view the differences of files, one can directly start Vim in diff mode by running vimdiff in a terminal. One can even set this as git difftool._
 
