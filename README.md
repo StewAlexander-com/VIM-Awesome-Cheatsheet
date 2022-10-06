@@ -197,7 +197,10 @@ g, - go to newer position in change list
 g; - go to older position in change list
 Ctrl + ] - jump to the tag under cursor
 Tip To jump to a mark you can either use a backtick (`) or an apostrophe ('). Using an apostrophe jumps to the beginning (first non-black) of the line holding the mark.
-Macros
+```
+---
+## Macros
+```
 qa - record macro a
 q - stop recording macro
 @a - run macro a
