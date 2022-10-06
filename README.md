@@ -111,7 +111,7 @@ U - restore (undo) last changed line
 Ctrl + r - redo
 . - repeat last command
 ```
-----
+---
 ### Marking text (visual mode)
 ```
 v - start visual mode, mark lines, then do a command (like y-yank)
