@@ -1,11 +1,16 @@
 # Vim Cheat Sheet
 
 ## Global
-
+### ```:``` Commands
+```
 :h[elp] keyword - open help for keyword
 :sav[eas] file - save file as
 :clo[se] - close current pane
 :ter[minal] - open a terminal window
+```
+---
+### Single Letter Actions
+```
 K - open man page for word under the cursor
 Tip Run vimtutor in a terminal to learn the first Vim commands.
 The Cursor movement
@@ -26,6 +31,10 @@ B - jump backwards to the start of a word (words can contain punctuation)
 0 - jump to the start of the line
 ^ - jump to the first non-blank character of the line
 $ - jump to the end of the line
+```
+---
+#### Multiple Letter Actions
+```
 g_ - jump to the last non-blank character of the line
 gg - go to the first line of the document
 G - go to the last line of the document
@@ -41,21 +50,21 @@ Tx - jump to after previous occurence of character x
 } - jump to next paragraph (or function/block, when editing code)
 { - jump to previous paragraph (or function/block, when editing code)
 zz - center cursor on screen
+```
+---
+### ```Ctrl``` Actions - Moving Around
+```
 Ctrl + e - move screen down one line (without moving cursor)
 Ctrl + y - move screen up one line (without moving cursor)
 Ctrl + b - move back one full screen
 Ctrl + f - move forward one full screen
 Ctrl + d - move forward 1/2 a screen
 Ctrl + u - move back 1/2 a screen
-Tip Prefix a cursor movement command with a number to repeat it. For example, 4j moves down 4 lines.
-Insert mode - inserting/appending text
-i - insert before the cursor
-I - insert at the beginning of the line
-a - insert (append) after the cursor
-A - insert (append) at the end of the line
-o - append (open) a new line below the current line
-O - append (open) a new line above the current line
-ea - insert (append) at the end of the word
+```
+* **Tip**: - _Prefix a cursor movement command with a number to repeat it. For example, 4j moves down 4 lines._
+---
+### ```Ctrl``` Actions - Insert Mode 
+```
 Ctrl + h - delete the character before the cursor during insert mode
 Ctrl + w - delete word before the cursor during insert mode
 Ctrl + j - begin new line during insert mode
@@ -64,6 +73,18 @@ Ctrl + d - de-indent (move left) line one shiftwidth during insert mode
 Ctrl + n - insert (auto-complete) next match before the cursor during insert mode
 Ctrl + p - insert (auto-complete) previous match before the cursor during insert mode
 Ctrl + rx - insert the contents of register x
+```
+---
+### Insert mode - inserting/appending text
+
+```
+i - insert before the cursor
+I - insert at the beginning of the line
+a - insert (append) after the cursor
+A - insert (append) at the end of the line
+o - append (open) a new line below the current line
+O - append (open) a new line above the current line
+ea - insert (append) at the end of the word
 Esc - exit insert mode
 Editing
 r - replace a single character
@@ -85,9 +106,10 @@ u - undo
 U - restore (undo) last changed line
 Ctrl + r - redo
 . - repeat last command
-
-Marking text (visual mode)
-
+```
+----
+### Marking text (visual mode)
+```
 v - start visual mode, mark lines, then do a command (like y-yank)
 V - start linewise visual mode
 o - move to other end of marked area
@@ -101,10 +123,11 @@ ib - inner block with ()
 iB - inner block with {}
 it - inner block with <> tags
 Esc - exit visual mode
-Tip Instead of b or B one can also use ( or { respectively.
-
-# Visual commands
-
+```
+* **Tip**: - _Instead of b or B one can also use ( or { respectively._
+--
+### Visual commands
+```
 > - shift text right
 < - shift text left
 y - yank (copy) marked text
@@ -112,8 +135,10 @@ d - delete marked text
 ~ - switch case
 u - change marked text to lowercase
 U - change marked text to uppercase
-
-Registers
+```
+---
+### Registers
+```
 :reg[isters] - show registers content
 "xy - yank into register x
 "xp - paste contents of register x
@@ -133,8 +158,10 @@ Tip Special registers:
  - - last small (less than a line) delete
  = - expression register
  _ - black hole register
+```
+---
+### Marks and positions
 
-Marks and positions
 :marks - list of marks
 ma - set current position for mark A
 `a - jump to position of mark A
