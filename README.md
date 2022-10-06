@@ -9,6 +9,7 @@
 
 ---
 
+
 ## Editor Actions
 ### Single Letter Actions
 
@@ -52,6 +53,8 @@
 * ```zz``` - center cursor on screen
 
 ---
+
+
 ## ```Ctrl``` Actions
 ### ```Ctrl``` - Moving Around
 
@@ -88,6 +91,8 @@
 * ```Ctrl + wk``` - move cursor to the window above (horizontal split)
 
 ---
+
+
 ## Editing Mode
 ### Insert mode - inserting/appending text
 
@@ -121,6 +126,8 @@
 * ```Ctrl + r``` - redo
 * ```.``` - repeat last command
 ---
+
+
 ## Marking text (visual mode)
 * ```v``` - start visual mode, mark lines, then do a command (like y-yank)
 * ```V``` - start linewise visual mode
@@ -137,6 +144,8 @@
 * ```Esc``` - exit visual mode
 * **Tip**: - _Instead of b or B one can also use ( or { respectively._
 * ---
+
+
 ## Visual commands
 * ```>``` - shift text right
 * ```<``` - shift text left
@@ -146,6 +155,8 @@
 * ```u``` - change marked text to lowercase
 * ```U``` - change marked text to uppercase
 ---   
+
+
 ## Registers
 * ```:reg[isters]``` - show registers content
 * ```"xy` ```- yank into register x
@@ -169,6 +180,8 @@
 * ``` =``` - expression register
 * ``` _``` - black hole register
 ---
+
+
 ## Marks and positions
 
 * ```:marks* ``` - list of marks
@@ -189,12 +202,16 @@
 
 * **Tip** - _To jump to a mark you can either use a backtick (``` ` ```) or an apostrophe ('). Using an apostrophe jumps to the beginning (first non-black) of the line holding the mark._
 ---
+
+
 ## Macros
 * ```qa``` - record macro a
 * ```q``` - stop recording macro
 * ```@a``` - run macro a
 * ```@@``` - rerun last run macro
 ---
+
+
 ## Cut and paste
 * ```yy``` - yank (copy) a line
 * ```2yy``` - yank (copy) 2 lines
@@ -209,6 +226,8 @@
 * ```d$``` - delete (cut) to the end of the line
 * ```x```- delete (cut) character
 ---
+
+
 ## Indent text
 * ```>>``` - indent (move right) line one shiftwidth
 * ```<<``` - de-indent (move left) line one shiftwidth
@@ -221,6 +240,8 @@
 * ```gg=G``` - re-indent entire buffer
 * ```]p``` - paste and adjust indent to current line
 ---
+
+
 ## Exiting
 * ```:w``` - write (save) the file, but don't exit
 * ```:w``` !sudo tee % - write out the current file using sudo
@@ -229,6 +250,7 @@
 * ```:q!``` or ZQ - quit and throw away unsaved changes
 * ```:wqa``` - write (save) and quit on all tabs
 ---
+
 ## Searching …
 
 ### Search and replace
@@ -248,6 +270,8 @@
 * ```:cope[n]``` - open a window containing the list of matches
 * ```:ccl[ose]``` - close the quickfix window
 ---
+
+
 ## Tabs
 * ```:tabnew``` or ```:tabnew {page.words.file}``` - open a file in a new tab
 * ```Ctrl + wT``` - move the current split window into its own tab
@@ -259,6 +283,8 @@
 * ```:tabo[nly]``` - close all tabs except for the current one
 * ```:tabdo command``` - run the command on all tabs (e.g. ```:tabdo q``` - closes all opened tabs)
 ---
+
+
 ## Working with multiple files
 * ```:e[dit]``` file - edit a file in a new buffer
 * ```:bn[ext]``` - go to the next buffer
@@ -271,7 +297,9 @@
 * ```:vs[plit] <file>``` - open a ```<file> ```in a new buffer and vertically split window
 * ```:vert[ical] ba[ll]``` - edit all buffers as vertical windows
 * ```:tab ba[ll]``` - edit all buffers as tabs
-----
+---
+
+
 ## Diff Operations
 * ```zf``` - manually define a fold up to motion
 * ```zd``` - delete fold under the cursor
