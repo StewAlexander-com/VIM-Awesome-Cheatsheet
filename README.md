@@ -1,7 +1,6 @@
 # Vim Cheat Sheet
 
-## Global
-### ```:``` Commands
+## ```:``` Commands
 ```
 :h[elp] keyword - open help for keyword
 :sav[eas] file - save file as
@@ -9,13 +8,13 @@
 :ter[minal] - open a terminal window
 ```
 ---
-### Single Letter Actions
+## Single Letter Actions
 ```
 K - open man page for word under the cursor
 ```
 * **Tip**: - _Run vimtutor in a terminal to learn the first Vim commands._
 
-#### The Cursor movement
+### The Cursor movement
 ```
 h - move cursor left
 j - move cursor down
@@ -36,7 +35,7 @@ B - jump backwards to the start of a word (words can contain punctuation)
 $ - jump to the end of the line
 ```
 ---
-#### Multiple Letter Actions
+## Multiple Letter Actions
 ```
 g_ - jump to the last non-blank character of the line
 gg - go to the first line of the document
@@ -55,8 +54,8 @@ Tx - jump to after previous occurence of character x
 zz - center cursor on screen
 ```
 ---
-### ```Ctrl``` Actions
-#### ```Ctrl``` - Moving Around
+## ```Ctrl``` Actions
+### ```Ctrl``` - Moving Around
 ```
 Ctrl + e - move screen down one line (without moving cursor)
 Ctrl + y - move screen up one line (without moving cursor)
@@ -66,7 +65,7 @@ Ctrl + d - move forward 1/2 a screen
 Ctrl + u - move back 1/2 a screen
 ```
 * **Tip**: - _Prefix a cursor movement command with a number to repeat it. For example, 4j moves down 4 lines._
-#### ```Ctrl``` - Insert Mode 
+### ```Ctrl``` - Insert Mode 
 ```
 Ctrl + h - delete the character before the cursor during insert mode
 Ctrl + w - delete word before the cursor during insert mode
@@ -77,9 +76,9 @@ Ctrl + n - insert (auto-complete) next match before the cursor during insert mod
 Ctrl + p - insert (auto-complete) previous match before the cursor during insert mode
 Ctrl + rx - insert the contents of register x
 ```
-#### ```Ctrl``` - Window Actions
+### ```Ctrl``` - Window Actions
 ``` 
-Ctrl + ws - split window
+Ctrl + ws - split window 
 Ctrl + wv - split window vertically
 Ctrl + ww - switch windows
 Ctrl + wq - quit a window
@@ -92,7 +91,7 @@ Ctrl + wk - move cursor to the window above (horizontal split)
 ```
 
 ---
-### Insert mode - inserting/appending text
+## Insert mode - inserting/appending text
 
 ```
 i - insert before the cursor
@@ -103,7 +102,10 @@ o - append (open) a new line below the current line
 O - append (open) a new line above the current line
 ea - insert (append) at the end of the word
 Esc - exit insert mode
-Editing
+```
+---
+## Editing
+```
 r - replace a single character
 J - join line below to the current one with one space in between
 gJ - join line below to the current one without space in between
@@ -125,7 +127,7 @@ Ctrl + r - redo
 . - repeat last command
 ```
 ---
-### Marking text (visual mode)
+## Marking text (visual mode)
 ```
 v - start visual mode, mark lines, then do a command (like y-yank)
 V - start linewise visual mode
@@ -143,7 +145,7 @@ Esc - exit visual mode
 ```
 * **Tip**: - _Instead of b or B one can also use ( or { respectively._
 ---
-### Visual commands
+## Visual commands
 ```
 > - shift text right
 < - shift text left
@@ -154,7 +156,7 @@ u - change marked text to lowercase
 U - change marked text to uppercase
 ```
 ---
-### Registers
+## Registers
 ```
 :reg[isters] - show registers content
 "xy - yank into register x
@@ -177,7 +179,7 @@ Tip Special registers:
  _ - black hole register
 ```
 ---
-### Marks and positions
+## Marks and positions
 ```
 :marks - list of marks
 ma - set current position for mark A
@@ -215,7 +217,7 @@ d$ - delete (cut) to the end of the line
 x - delete (cut) character
 ```
 ---
-### Indent text
+## Indent text
 ```
 >> - indent (move right) line one shiftwidth
 << - de-indent (move left) line one shiftwidth
@@ -229,7 +231,7 @@ gg=G - re-indent entire buffer
 ]p - paste and adjust indent to current line
 ```
 ---
-### Exiting
+## Exiting
 ```
 :w - write (save) the file, but don't exit
 :w !sudo tee % - write out the current file using sudo
@@ -239,6 +241,8 @@ gg=G - re-indent entire buffer
 :wqa - write (save) and quit on all tabs
 ```
 ---
+## Searching …
+
 ### Search and replace
 ```
 /pattern - search for pattern
@@ -250,7 +254,6 @@ N - repeat search in opposite direction
 :%s/old/new/gc - replace all old with new throughout file with confirmations
 :noh[lsearch] - remove highlighting of search matches
 ```
----
 ### Search in multiple files
 ```
 :vim[grep] /pattern/ {`{file}`} - search for pattern in multiple files
@@ -261,7 +264,7 @@ e.g. :vim[grep] /foo/ **/*
 :ccl[ose] - close the quickfix window
 ```
 ---
-### Tabs
+## Tabs
 ```
 :tabnew or :tabnew {page.words.file} - open a file in a new tab
 Ctrl + wT - move the current split window into its own tab
@@ -274,7 +277,7 @@ gT or :tabp[revious] - move to the previous tab
 :tabdo command - run the command on all tabs (e.g. :tabdo q - closes all opened tabs)
 ```
 ---
-### Working with multiple files
+## Working with multiple files
 ```
 :e[dit] file - edit a file in a new buffer
 :bn[ext] - go to the next buffer
