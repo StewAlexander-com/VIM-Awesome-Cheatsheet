@@ -227,14 +227,20 @@ x - delete (cut) character
 =iB - re-indent inner block with {}
 gg=G - re-indent entire buffer
 ]p - paste and adjust indent to current line
-Exiting
+```
+---
+* Exiting
+```
 :w - write (save) the file, but don't exit
 :w !sudo tee % - write out the current file using sudo
 :wq or :x or ZZ - write (save) and quit
 :q - quit (fails if there are unsaved changes)
 :q! or ZQ - quit and throw away unsaved changes
 :wqa - write (save) and quit on all tabs
-Search and replace
+```
+---
+### Search and replace
+```
 /pattern - search for pattern
 ?pattern - search backward for pattern
 \vpattern - 'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)
@@ -243,14 +249,20 @@ N - repeat search in opposite direction
 :%s/old/new/g - replace all old with new throughout file
 :%s/old/new/gc - replace all old with new throughout file with confirmations
 :noh[lsearch] - remove highlighting of search matches
-Search in multiple files
+```
+---
+### Search in multiple files
+```
 :vim[grep] /pattern/ {`{file}`} - search for pattern in multiple files
 e.g. :vim[grep] /foo/ **/*
 :cn[ext] - jump to the next match
 :cp[revious] - jump to the previous match
 :cope[n] - open a window containing the list of matches
 :ccl[ose] - close the quickfix window
-Tabs
+```
+---
+### Tabs
+```
 :tabnew or :tabnew {page.words.file} - open a file in a new tab
 Ctrl + wT - move the current split window into its own tab
 gt or :tabn[ext] - move to the next tab
@@ -260,7 +272,10 @@ gT or :tabp[revious] - move to the previous tab
 :tabc[lose] - close the current tab and all its windows
 :tabo[nly] - close all tabs except for the current one
 :tabdo command - run the command on all tabs (e.g. :tabdo q - closes all opened tabs)
-Working with multiple files
+```
+---
+### Working with multiple files
+```
 :e[dit] file - edit a file in a new buffer
 :bn[ext] - go to the next buffer
 :bp[revious] - go to the previous buffer
