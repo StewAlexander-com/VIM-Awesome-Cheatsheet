@@ -56,7 +56,7 @@ zz - center cursor on screen
 ```
 ---
 ### ```Ctrl``` Actions
-#### Moving Around
+#### ```Ctrl``` - Moving Around
 ```
 Ctrl + e - move screen down one line (without moving cursor)
 Ctrl + y - move screen up one line (without moving cursor)
@@ -66,8 +66,7 @@ Ctrl + d - move forward 1/2 a screen
 Ctrl + u - move back 1/2 a screen
 ```
 * **Tip**: - _Prefix a cursor movement command with a number to repeat it. For example, 4j moves down 4 lines._
-
-#### Insert Mode 
+#### ```Ctrl``` - Insert Mode 
 ```
 Ctrl + h - delete the character before the cursor during insert mode
 Ctrl + w - delete word before the cursor during insert mode
@@ -78,6 +77,20 @@ Ctrl + n - insert (auto-complete) next match before the cursor during insert mod
 Ctrl + p - insert (auto-complete) previous match before the cursor during insert mode
 Ctrl + rx - insert the contents of register x
 ```
+#### ```Ctrl``` - Window Actions
+``` 
+Ctrl + ws - split window
+Ctrl + wv - split window vertically
+Ctrl + ww - switch windows
+Ctrl + wq - quit a window
+Ctrl + wx - exchange current window with next one
+Ctrl + w= - make all windows equal height & width
+Ctrl + wh - move cursor to the left window (vertical split)
+Ctrl + wl - move cursor to the right window (vertical split)
+Ctrl + wj - move cursor to the window below (horizontal split)
+Ctrl + wk - move cursor to the window above (horizontal split)
+```
+
 ---
 ### Insert mode - inserting/appending text
 
@@ -165,7 +178,7 @@ Tip Special registers:
 ```
 ---
 ### Marks and positions
-
+```
 :marks - list of marks
 ma - set current position for mark A
 `a - jump to position of mark A
@@ -200,7 +213,10 @@ dw - delete (cut) the characters of the word from the cursor position to the sta
 D - delete (cut) to the end of the line
 d$ - delete (cut) to the end of the line
 x - delete (cut) character
-Indent text
+```
+---
+### Indent text
+```
 >> - indent (move right) line one shiftwidth
 << - de-indent (move left) line one shiftwidth
 >% - indent a block with () or {} (cursor on brace)
@@ -256,17 +272,10 @@ Working with multiple files
 :vs[plit] file - open a file in a new buffer and vertically split window
 :vert[ical] ba[ll] - edit all buffers as vertical windows
 :tab ba[ll] - edit all buffers as tabs
-Ctrl + ws - split window
-Ctrl + wv - split window vertically
-Ctrl + ww - switch windows
-Ctrl + wq - quit a window
-Ctrl + wx - exchange current window with next one
-Ctrl + w= - make all windows equal height & width
-Ctrl + wh - move cursor to the left window (vertical split)
-Ctrl + wl - move cursor to the right window (vertical split)
-Ctrl + wj - move cursor to the window below (horizontal split)
-Ctrl + wk - move cursor to the window above (horizontal split)
-Diff
+```
+---
+----
+## Diff Operations
 zf - manually define a fold up to motion
 zd - delete fold under the cursor
 za - toggle fold under the cursor
