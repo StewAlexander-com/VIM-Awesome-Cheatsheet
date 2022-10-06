@@ -188,23 +188,24 @@
 * **Tip** - _To jump to a mark you can either use a backtick (``` ` ```) or an apostrophe ('). Using an apostrophe jumps to the beginning (first non-black) of the line holding the mark._
 ---
 ## Macros
-qa - record macro a
-q - stop recording macro
-@a - run macro a
-@@ - rerun last run macro
-Cut and paste
-yy - yank (copy) a line
-2yy - yank (copy) 2 lines
-yw - yank (copy) the characters of the word from the cursor position to the start of the next word
-y$ - yank (copy) to end of line
-p - put (paste) the clipboard after cursor
-P - put (paste) before cursor
-dd - delete (cut) a line
-2dd - delete (cut) 2 lines
-dw - delete (cut) the characters of the word from the cursor position to the start of the next word
-D - delete (cut) to the end of the line
-d$ - delete (cut) to the end of the line
-x - delete (cut) character
+* ```qa``` - record macro a
+* ```q``` - stop recording macro
+* ```@a``` - run macro a
+* ```@@``` - rerun last run macro
+---
+## Cut and paste
+* ```yy``` - yank (copy) a line
+* ```2yy``` - yank (copy) 2 lines
+* ```yw``` - yank (copy) the characters of the word from the cursor position to the start of the next word
+* ```y$``` - yank (copy) to end of line
+* ```p``` - put (paste) the clipboard after cursor
+* ```P``` - put (paste) before cursor
+* ```dd``` - delete (cut) a line
+* ```2dd``` - delete (cut) 2 lines
+* ```dw``` - delete (cut) the characters of the word from the cursor position to the start of the next word
+* ```D``` - delete (cut) to the end of the line
+* ```d$``` - delete (cut) to the end of the line
+* ```x```- delete (cut) character
 ---
 ## Indent text
 >> - indent (move right) line one shiftwidth
@@ -287,5 +288,4 @@ dp or :diffpu[t] - put difference (to other buffer)
 :diffo[ff] - switch off diff mode for current window
 * **Tip** - _The commands for folding (e.g. za) operate on one level. To operate on all levels, use uppercase letters (e.g. zA)._
 * **Tip** - _To view the differences of files, one can directly start Vim in diff mode by running vimdiff in a terminal. One can even set this as git difftool._
-
 
