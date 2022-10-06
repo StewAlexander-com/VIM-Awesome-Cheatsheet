@@ -273,7 +273,6 @@ Working with multiple files
 :vert[ical] ba[ll] - edit all buffers as vertical windows
 :tab ba[ll] - edit all buffers as tabs
 ```
----
 ----
 ## Diff Operations
 zf - manually define a fold up to motion
