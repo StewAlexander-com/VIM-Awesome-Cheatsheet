@@ -55,7 +55,8 @@ Tx - jump to after previous occurence of character x
 zz - center cursor on screen
 ```
 ---
-### ```Ctrl``` Actions - Moving Around
+### ```Ctrl``` Actions
+#### Moving Around
 ```
 Ctrl + e - move screen down one line (without moving cursor)
 Ctrl + y - move screen up one line (without moving cursor)
@@ -65,8 +66,8 @@ Ctrl + d - move forward 1/2 a screen
 Ctrl + u - move back 1/2 a screen
 ```
 * **Tip**: - _Prefix a cursor movement command with a number to repeat it. For example, 4j moves down 4 lines._
----
-### ```Ctrl``` Actions - Insert Mode 
+
+#### Insert Mode 
 ```
 Ctrl + h - delete the character before the cursor during insert mode
 Ctrl + w - delete word before the cursor during insert mode
