@@ -308,5 +308,5 @@ dp or :diffpu[t] - put difference (to other buffer)
 :diffo[ff] - switch off diff mode for current window
 ```
 * **Tip** - _The commands for folding (e.g. za) operate on one level. To operate on all levels, use uppercase letters (e.g. zA)._
-* **Tip* - _To view the differences of files, one can directly start Vim in diff mode by running vimdiff in a terminal. One can even set this as git difftool._
+* **Tip** - _To view the differences of files, one can directly start Vim in diff mode by running vimdiff in a terminal. One can even set this as git difftool._
 
