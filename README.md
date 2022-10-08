@@ -6,6 +6,7 @@
   * [Editor Actions](#editor-actions)
     + [Single Letter Actions](#single-letter-actions)
     + [Multiple Letter Actions](#multiple-letter-actions)
+    + [Multiple Line Actions](#multiple-line-actions)
   * [Ctrl Actions](#ctrl-actions)
     + [Moving Around](#moving-around)
     + [Insert Mode](#insert-mode)
@@ -81,6 +82,14 @@
 * ```Fx``` - jump to previous occurence of character x
 * ```Tx``` - jump to after previous occurence of character x
 * ```zz``` - center cursor on screen
+
+### Multiple Line Actions
+
+* ```gh``` - move cursor up to the pevious editor line
+* ```gj``` - move cursor down to the next editor line
+* ```g0``` - jump to the beginning of the editor line
+* ```g^``` - jump to the first non-blank character in the editor line
+* ```g$``` - jump to the end of the editor line
 
 ---
 
