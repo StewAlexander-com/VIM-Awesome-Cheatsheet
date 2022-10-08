@@ -161,6 +161,7 @@
 ## Marking text via visual mode
 * ```v``` - start visual mode, mark lines, then do a command (like y-yank)
 * ```V``` - start linewise visual mode
+* ```gv``` - start visual mode, recalling the previous selection
 * ```o``` - move to other end of marked area
 * ```Ctrl + v``` - start visual block mode
 * ```O``` - move to other corner of block
