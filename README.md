@@ -71,9 +71,9 @@
 
 ### Multiple Letter Actions
 
-* ```g_ ```- jump to the last non-blank character of the line
-* ```gg ```- go to the first line of the document
-* ```G -``` go to the last line of the document
+* ```g_``` - jump to the last non-blank character of the line
+* ```gg``` - go to the first line of the document
+* ```G```  - go to the last line of the document
 * ```5gg``` or ```5G```- go to line 5
 * ```gd``` - move to local declaration
 * ```gD``` - move to global declaration
