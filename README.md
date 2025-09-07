@@ -28,6 +28,7 @@
     + [Search in multiple files](#search-in-multiple-files)
   * [Tabs](#tabs)
   * [Working with multiple files](#working-with-multiple-files)
+  * [Ex Commands and Settings](#ex-commands-and-settings)
   * [Diff Operations](#diff-operations)
 
 
@@ -58,6 +59,8 @@
 * ```W``` - jump forwards to the start of a word (words can contain punctuation)
 * ```e``` - jump forwards to the end of a word
 * ```E``` - jump forwards to the end of a word (words can contain punctuation)
+* ```ge``` - jump backwards to the end of a word
+* ```gE``` - jump backwards to the end of a word (words can contain punctuation)
 * ```b``` - jump backwards to the start of a word
 * ```B``` - jump backwards to the start of a word (words can contain punctuation)
 * ```%``` - move to matching character (default supported pairs: '()', '{}', '[]' - use :h matchpairs in vim for more info)
@@ -79,13 +82,13 @@
 * ```gD``` - move to global declaration
 * ```fx``` - jump to next occurrence of character x
 * ```tx``` - jump to before next occurrence of character x
-* ```Fx``` - jump to previous occurence of character x
-* ```Tx``` - jump to after previous occurence of character x
+* ```Fx``` - jump to previous occurrence of character x
+* ```Tx``` - jump to after previous occurrence of character x
 * ```zz``` - center cursor on screen
 
 ### Multiple Line Actions
 
-* ```gh``` - move cursor up to the pevious editor line
+* ```gh``` - move cursor up to the previous editor line
 * ```gj``` - move cursor down to the next editor line
 * ```g0``` - jump to the beginning of the editor line
 * ```g^``` - jump to the first non-blank character in the editor line
@@ -146,8 +149,10 @@
 
 ### General Editing
 * ```r``` - replace a single character
+* ```R``` - enter replace mode (overwrite mode)
 * ```J``` - join line below to the current one with one space in between
 * ```gJ``` - join line below to the current one without space in between
+* ```~``` - toggle case of character under cursor and move right
 * ```gwip``` - reflow paragraph
 * ```g~``` - switch case up to motion
 * ```gu``` - change to lowercase up to motion
@@ -178,9 +183,20 @@
 * ```ab``` - a block with ()
 * ```aB``` - a block with {}
 * ```at``` - a block with <> tags
+* ```ap``` - a paragraph
+* ```as``` - a sentence
+* ```a"``` - a double-quoted string
+* ```a'``` - a single-quoted string
+* ```a```` - a backtick-quoted string
 * ```ib``` - inner block with ()
 * ```iB``` - inner block with {}
 * ```it``` - inner block with <> tags
+* ```iw``` - inner word
+* ```ip``` - inner paragraph
+* ```is``` - inner sentence
+* ```i"``` - inner double-quoted string
+* ```i'``` - inner single-quoted string
+* ```i```` - inner backtick-quoted string
 * ```Esc``` - exit visual mode
 * **Tip**: - _Instead of b or B one can also use ( or { respectively._
 * ---
@@ -199,39 +215,39 @@
 
 ## Registers
 * ```:reg[isters]``` - show registers content
-* ```"xy` ```- yank into register x
-* ```"xp` ``` - paste contents of register x
-* ```"+y` ```- yank into the system clipboard register
-* ```"+p` ```- paste from the system clipboard register
+* ```"xy``` - yank into register x
+* ```"xp``` - paste contents of register x
+* ```"+y``` - yank into the system clipboard register
+* ```"+p``` - paste from the system clipboard register
 
 * **Tip** - _Registers are being stored in ~/.viminfo, and will be loaded again on next restart of vim._
 
 ### Special registers
-* ``` 0``` - last yank
-* ``` "``` - unnamed register, last delete or yank
-* ``` %``` - current file name
-* ``` #``` - alternate file name
-* ``` *``` - clipboard contents (X11 primary)
-* ``` +``` - clipboard contents (X11 clipboard)
-* ``` /``` - last search pattern
-* ``` :``` - last command-line
-* ``` .``` - last inserted text
-* ``` -``` - last small (less than a line) delete
-* ``` =``` - expression register
-* ``` _``` - black hole register
+* ```0``` - last yank
+* ```"``` - unnamed register, last delete or yank
+* ```%``` - current file name
+* ```#``` - alternate file name
+* ```*``` - clipboard contents (X11 primary)
+* ```+``` - clipboard contents (X11 clipboard)
+* ```/``` - last search pattern
+* ```:``` - last command-line
+* ```.``` - last inserted text
+* ```-``` - last small (less than a line) delete
+* ```=``` - expression register
+* ```_``` - black hole register
 ---
 
 
 ## Marks and positions
 
-* ```:marks* ``` - list of marks
-* ``` ma``` - set current position for mark ```A```
-* ``` `a ``` - jump to position of mark ```A```
-* ```y`a``` - yank text to position of mark``` A```
+* ```:marks``` - list of marks
+* ```ma``` - set current position for mark ```A```
+* ``` `a``` - jump to position of mark ```A```
+* ```y`a``` - yank text to position of mark ```A```
 * ``` `0``` - go to the position where Vim was previously exited
 * ``` `"``` - go to the position when last editing this file
 * ``` `.``` - go to the position of the last change in this file
-* ``` `` - ```go to the position before the last jump
+* ``` `` ``` - go to the position before the last jump
 * ```:ju[mps]``` - list of jumps
 * ```Ctrl + i``` - go to newer position in jump list
 * ```Ctrl + o``` - go to older position in jump list
@@ -264,7 +280,7 @@
 * ```dw``` - delete (cut) the characters of the word from the cursor position to the start of the next word
 * ```D``` - delete (cut) to the end of the line
 * ```d$``` - delete (cut) to the end of the line
-* ```x```- delete (cut) character
+* ```x``` - delete (cut) character
 ---
 
 
@@ -297,14 +313,18 @@
 * ```/pattern``` - search for pattern
 * ```?pattern``` - search backward for pattern
 * ```\vpattern``` - 'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)
+* ```*``` - search for the word under cursor forward
+* ```#``` - search for the word under cursor backward
+* ```g*``` - search for partial word under cursor forward
+* ```g#``` - search for partial word under cursor backward
 * ```n``` - repeat search in same direction
 * ```N``` - repeat search in opposite direction
 * ```:%s/old/new/g``` - replace all old with new throughout file
 * ```:%s/old/new/gc``` - replace all old with new throughout file with confirmations
 * ```:noh[lsearch]``` - remove highlighting of search matches
 ### Search in multiple files
-* ```:vim[grep] /pattern/ {`{file}`}****``` - search for pattern in multiple files
-** ```e.g. :vim[grep] /foo/ **/*```
+* ```:vim[grep] /pattern/ {file}``` - search for pattern in multiple files
+* ```e.g. :vim[grep] /foo/ **/*```
 * ```:cn[ext]``` - jump to the next match
 * ```:cp[revious]``` - jump to the previous match
 * ```:cope[n]``` - open a window containing the list of matches
@@ -340,6 +360,34 @@
 ---
 
 
+## Ex Commands and Settings
+* ```:set``` - show all settings
+* ```:set number``` or ```:set nu``` - show line numbers
+* ```:set nonumber``` or ```:set nonu``` - hide line numbers
+* ```:set wrap``` - enable line wrapping
+* ```:set nowrap``` - disable line wrapping
+* ```:set hlsearch``` - highlight search results
+* ```:set nohlsearch``` - don't highlight search results
+* ```:set incsearch``` - show search results as you type
+* ```:set noincsearch``` - don't show search results as you type
+* ```:set ignorecase``` - ignore case in searches
+* ```:set noignorecase``` - don't ignore case in searches
+* ```:set smartcase``` - ignore case unless search contains uppercase
+* ```:set autoindent``` - automatically indent new lines
+* ```:set noautoindent``` - don't automatically indent new lines
+* ```:set expandtab``` - use spaces instead of tabs
+* ```:set noexpandtab``` - use tabs instead of spaces
+* ```:set tabstop=4``` - set tab width to 4 spaces
+* ```:set shiftwidth=4``` - set indentation width to 4 spaces
+* ```:map``` - show all mappings
+* ```:map <key> <command>``` - create a mapping
+* ```:unmap <key>``` - remove a mapping
+* ```:abbrev``` - show all abbreviations
+* ```:abbrev <short> <long>``` - create an abbreviation
+* ```:una <short>``` - remove an abbreviation
+
+---
+
 ## Diff Operations
 * ```zf``` - manually define a fold up to motion
 * ```zd``` - delete fold under the cursor
@@ -349,7 +397,7 @@
 * ```zr``` - reduce (open) all folds by one level
 * ```zm``` - fold more (close) all folds by one level
 * ```zi``` - toggle folding functionality
-* ```]c```- jump to start of next change
+* ```]c``` - jump to start of next change
 * ```[c``` - jump to start of previous change
 * ```do``` or ```:diffg[et]``` - obtain (get) difference (from other buffer)
 * ```dp``` or ```:diffpu[t]``` - put difference (to other buffer)
