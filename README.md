@@ -187,7 +187,7 @@
 * ```it``` - inner block with <> tags
 * ```Esc``` - exit visual mode
 * **Tip**: - _Instead of b or B one can also use ( or { respectively._
-* ---
+---
 
 
 ## Visual commands
@@ -203,10 +203,10 @@
 
 ## Registers
 * ```:reg[isters]``` - show registers content
-* ```"xy` ```- yank into register x
-* ```"xp` ``` - paste contents of register x
-* ```"+y` ```- yank into the system clipboard register
-* ```"+p` ```- paste from the system clipboard register
+* ```"xy``` - yank into register x
+* ```"xp``` - paste contents of register x
+* ```"+y``` - yank into the system clipboard register
+* ```"+p``` - paste from the system clipboard register
 
 * **Tip** - _Registers are being stored in ~/.viminfo, and will be loaded again on next restart of vim._
 
@@ -228,14 +228,14 @@
 
 ## Marks and positions
 
-* ```:marks* ``` - list of marks
-* ``` ma``` - set current position for mark ```A```
-* ``` `a ``` - jump to position of mark ```A```
-* ```y`a``` - yank text to position of mark``` A```
+* ```:marks``` - list of marks
+* ```ma``` - set current position for mark ```a```
+* ``` `a``` - jump to position of mark ```a```
+* ```y`a``` - yank text to position of mark ```a```
 * ``` `0``` - go to the position where Vim was previously exited
 * ``` `"``` - go to the position when last editing this file
 * ``` `.``` - go to the position of the last change in this file
-* ``` `` - ```go to the position before the last jump
+* ``` `` ``` - go to the position before the last jump
 * ```:ju[mps]``` - list of jumps
 * ```Ctrl + i``` - go to newer position in jump list
 * ```Ctrl + o``` - go to older position in jump list
@@ -244,7 +244,7 @@
 * ```g;``` - go to older position in change list
 * ```Ctrl + ]``` - jump to the tag under cursor
 
-* **Tip** - _To jump to a mark you can either use a backtick (``` ` ```) or an apostrophe ('). Using an apostrophe jumps to the beginning (first non-black) of the line holding the mark._
+* **Tip** - _To jump to a mark you can either use a backtick (``` ` ```) or an apostrophe ('). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark._
 ---
 
 
@@ -268,7 +268,7 @@
 * ```dw``` - delete (cut) the characters of the word from the cursor position to the start of the next word
 * ```D``` - delete (cut) to the end of the line
 * ```d$``` - delete (cut) to the end of the line
-* ```x```- delete (cut) character
+* ```x``` - delete (cut) character
 ---
 
 
@@ -288,7 +288,7 @@
 
 ## Exiting and Saving Files
 * ```:w``` - write (save) the file, but don't exit
-* ```:w!sudo tee %``` - write out the current file using sudo
+* ```:w !sudo tee %``` - write out the current file using sudo
 * ```:wq``` or ```:x``` or ```ZZ``` - write (save) and quit
 * ```:q``` - quit (fails if there are unsaved changes)
 * ```:q!``` or ```ZQ``` - quit and throw away unsaved changes
@@ -303,12 +303,16 @@
 * ```\vpattern``` - 'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)
 * ```n``` - repeat search in same direction
 * ```N``` - repeat search in opposite direction
+* ```*``` - search forward for word under cursor
+* ```#``` - search backward for word under cursor
+* ```g*``` - search forward for partial word under cursor
+* ```g#``` - search backward for partial word under cursor
 * ```:%s/old/new/g``` - replace all old with new throughout file
 * ```:%s/old/new/gc``` - replace all old with new throughout file with confirmations
 * ```:noh[lsearch]``` - remove highlighting of search matches
 ### Search in multiple files
-* ```:vim[grep] /pattern/ {`{file}`}****``` - search for pattern in multiple files
-** ```e.g. :vim[grep] /foo/ **/*```
+* ```:vimgrep /pattern/ {file(s)}``` - search for pattern in multiple files
+* ```e.g. :vimgrep /foo/ **/*```
 * ```:cn[ext]``` - jump to the next match
 * ```:cp[revious]``` - jump to the previous match
 * ```:cope[n]``` - open a window containing the list of matches
@@ -317,7 +321,7 @@
 
 
 ## Tabs
-* ```:tabnew``` or ```:tabnew {page.words.file}``` - open a file in a new tab
+* ```:tabnew``` or ```:tabnew {file}``` - open a file in a new tab
 * ```Ctrl + wT``` - move the current split window into its own tab
 * ```gt``` or ```:tabn[ext]``` - move to the next tab
 * ```gT``` or ```:tabp[revious]``` - move to the previous tab
@@ -334,7 +338,7 @@
 * ```:bn[ext]``` - go to the next buffer
 * ```:bp[revious]``` - go to the previous buffer
 * ```:bd[elete]``` - delete a buffer (close a file)
-* ```:b[uffer]#``` - go to a buffer by index #
+* ```:b[uffer]#``` - go to the alternate buffer
 * ```:b[uffer] <file>``` - go to a buffer by ```<file>``` (_remove the "<>")
 * ```:ls``` or ```:buffers``` - list all open buffers
 * ```:sp[lit] <file>``` - open a ```<file>``` in a new buffer and split window
@@ -364,5 +368,5 @@
 * **Tip** - _To view the differences of files, one can directly start Vim in diff mode by running vimdiff in a terminal. One can even set this as git difftool._
 
 ----
-* _**Last,but not least, for more VIM goodies checkout [VIM-Galore on Github](https://github.com/mhinz/vim-galore)**_
+* _**Last, but not least, for more Vim goodies, check out [Vim-Galore on GitHub](https://github.com/mhinz/vim-galore)**_
 
