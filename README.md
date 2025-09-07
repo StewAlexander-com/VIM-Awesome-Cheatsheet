@@ -79,17 +79,21 @@
 * ```gD``` - move to global declaration
 * ```fx``` - jump to next occurrence of character x
 * ```tx``` - jump to before next occurrence of character x
-* ```Fx``` - jump to previous occurence of character x
-* ```Tx``` - jump to after previous occurence of character x
+* ```Fx``` - jump to previous occurrence of character x
+* ```Tx``` - jump to after previous occurrence of character x
+* ```ge``` - jump backwards to the end of a word
+* ```gE``` - jump backwards to the end of a WORD
+* ```zt``` - scroll so cursor line is at top
+* ```zb``` - scroll so cursor line is at bottom
 * ```zz``` - center cursor on screen
 
 ### Multiple Line Actions
 
-* ```gh``` - move cursor up to the pevious editor line
-* ```gj``` - move cursor down to the next editor line
-* ```g0``` - jump to the beginning of the editor line
-* ```g^``` - jump to the first non-blank character in the editor line
-* ```g$``` - jump to the end of the editor line
+* ```gk``` - move cursor up to the previous screen line
+* ```gj``` - move cursor down to the next screen line
+* ```g0``` - jump to the beginning of the screen line
+* ```g^``` - jump to the first non-blank character in the screen line
+* ```g$``` - jump to the end of the screen line
 
 ---
 
